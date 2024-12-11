@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 # Paths to the test audio files
-file1_path = '/home/jalvin/Desktop/New Folder 3/Azawi - Masavu (Audio)(MP3_160K).mp3'
-file2_path = '/home/jalvin/Desktop/New Folder 3/BAD BUNNY x DRAKE - MÍA (Video Oficial)(MP3_160K).mp3'
+file1_path = '/pathtofile/audio1.mp3'
+file2_path = '/pathtofile/audio2.mp3'
 
 # API endpoint for comparing audio files
 api_url = 'http://172.17.0.2:5000/compare'
@@ -45,7 +45,7 @@ def fetch_and_display_image(image_url):
     response.raise_for_status()  # Raise exception for HTTP errors
 
     # Save the image locally
-    image_path = '/home/jalvin/Desktop/image.png'
+    image_path = '/Desktop/image.png'
     with open(image_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):
             f.write(chunk)
